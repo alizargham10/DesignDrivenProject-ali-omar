@@ -20,7 +20,7 @@ Figure 1
  2. Access to location (GPS precise location), storage and microphone.
  3. Network connection.
 
- ![Node Sensor Free](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot_2022-01-27_114755.png)
+ ![Node Sensor Free](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot_2022-01-27_114755.png)
 
  Figure 2.1
 ### **Step 1.**
@@ -40,7 +40,7 @@ Figure 1
 
 Once installed, open a command prompt and run the following command to ensure Node.js and npm are installed correctly.
 
-![You should receive output that looks similar to following image](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot_2022-01-27_122045.png)
+![You should receive output that looks similar to following image](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot_2022-01-27_122045.png)
 
 Figure 2.2 
 
@@ -65,13 +65,13 @@ GUI for real time monitoring can be accessed from the Dashboard
 
 click on the triangle icon then click on the dashboard as shown in the image below
 
-![Dasboard](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot_2022-02-06_202205.png)  
+![Dasboard](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot_2022-02-06_202205.png)  
 
 Figure 2.3
 
 In dashboard window click on the arrow button as highlighted in the image below 
 
-![GUI Icon](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot_2022-02-06_202508.png)
+![GUI Icon](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot_2022-02-06_202508.png)
 
 Figure 2.4
  
@@ -93,14 +93,14 @@ It is obvious that the traditional approach is to attack the source of the noise
  ### **3.2.1 Plotting Decibel vs. Time Graph(s)**
 Sound Level Meters (SLM) measures the sound level in an environment by calculating the frequency weighted pressure of the sound waves which travel through the air from its source. The units of the sound intensity calculated are called decibels. Electronic circuits within the sound meter amplify and filter the sound picked up from the microphone attached to it and produce accurate sound level readings. The sound intensity is calculated using a logarithm based algorithm. The sound intensity is represented by the power of 10 which is expressed as a multiple of the hearing intensity. The following is the standard equation (Eq. (1)) to calculate the sound intensity in decibels.
 
-![Eq 1](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot%202022-02-07%20141755.png)
+![Eq 1](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20141755.png)
 
 Figure 3.1
 
 (Decibels equals log based 10 times 10,000 times initial intensity divided by initial intensity).
 Noise data in decibels are then live-streamed by Noise Free Sensor App via MQTT protocol and can be imported to hivemq.com, which is a free public broker, by setting a connection and then a subscription with valid ID set by the user. An example is shown in figure 3.2 below:
 
-![Fig 3.2](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/sound%20capture.PNG)
+![Fig 3.2](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/sound%20capture.PNG)
 
 Figure 3.2: Public Broker Hivemq used to stream data
 
@@ -108,53 +108,53 @@ Figure 3.2: Public Broker Hivemq used to stream data
 
 Node-Red provides both an MQTT subscribe (input) and publish (output) node.The configuration for these nodes are almost identical as the main part of the configuration concerns the actual client connection. To connect to an MQTT broker or server we need to know the Broker IP address or name, and the port that it is using (default 1883). 
 
-![Fig 3.3](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/5.png)
+![Fig 3.3](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/5.png)
 
 Figure 3.3: MQTT In Node.
 
 By double clicking on the node and then adding the link for our mqtt broker and Topic relative to the Base Topic we set on Sensor Free Node App, we are now ready to import the data into NodeRed, as can be shown in Figures 3.3 and 3.4 below:
 
-![Fig 3.4](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/1.png)
+![Fig 3.4](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/1.png)
 
 Figure 3.4: MQTT in node used to import live data into Node Red
 
-![Fig 3.5](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/2.jpg)
+![Fig 3.5](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/2.jpg)
 
  Figure 3.5 : Streaming live Data by MQTT on Node Sensor Free Mobile App
 
  A Node-RED graphing package contains a data source node which handles historical data and live data streams, and a hackable visualization application designed to connect to the data source nodes. By connecting “omarNodeRed2/noise/decibels”, which is the MQTT in we set earlier, to the “dB vs Time Phone 2”, we are now able to plot decibel vs. Time graphs. This process can be demonstrated in Figure 4.5. It is to be noted that we set the MQTT in node to import only decibel from the noise sensor, as can be observed by the reader.
 
- ![Fig 3.6](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/3.png)
+ ![Fig 3.6](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/3.png)
 
  Figure 3.6: Configuration of Nodes in the flow for generating dB vs. Time graphs
 
 Eventually the graph for Decibels vs. Time can be plotted as shown in Figure 3.7 Below:
 
 
- ![Fig 3.7](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/db%20vs%20time.png)
+ ![Fig 3.7](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/9.jpg)
 
 ### **3.2.2 Plotting Intensity vs. Time Graph(s)**
 
 The range of energy from the lowest sound that can be heard to a sound so loud that is produces pain rather than the sensation of hearing is so large that an exponential scale is used. The lowest possible sound that can be heard is called the threshold of hearing. The sound level at the threshold of hearing is:
-![Treshold of hearing](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot%202022-02-07%20142227.png)
+![Treshold of hearing](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20142227.png)
 
 Combining Equation (2) into Equation (1) and solving for Intensity, we obtain;
 
-![Eq 2](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot%202022-02-07%20145033.png)
+![Eq 2](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20145033.png)
 
 To get the value of intensity we used the formula given in eq.2, The obtained values were very small and it was very difficult to plot them on a graph. Another function used to take the logarithm of the value obtained from eq.2. With this technique we successfully ploted the intensity vs time graph.
 
 Graph for Intensity vs. Time can then be plotted as shown in figure 3.8 below:
 
-![Fig 3.8](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot%202022-02-07%20181332.png)
+![Fig 3.8](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20181332.png)
 
 ### **3.2.3 Plotting Voltage Ratio Vs. Time Graph(s)**
 The microphone changes the sound waves from your voice into electrical signals that are sent to the audio amplifier of the radio components. A sound pressure increases with increased loudness. In Europe the output voltage is directly classified as microphone’s sensitivity and its unit is mV/Pa (milli-volt per pascal). The sensitivity changes with input voltage. Voltage ratio also known as gain factor can be calculate using the formula 
 
 
-![Voltage ratio formula](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot%202022-02-07%20150141.png)
+![Voltage ratio formula](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20150141.png)
 
-![Voltage ratio vs time graph](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot%202022-02-07%20181429.png)
+![Voltage ratio vs time graph](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20181429.png)
 
 Figure 3.9: Voltage Ratio vs. Time Graphs
 
@@ -166,11 +166,11 @@ However, since we imported our live data by means of MQTT streaming protocol, th
 
 We then made a short development in the code to flow.get “lat” and “lon”, refereeing to latitude and longitude, respectively. Moreover line 4 gets the values for decibels and displays them on the map when the user right clicks on the circle denoting the source of noise’s location. This circle was set in line 5 with designated radius and color as shown below:
 
-![function node](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/4.png)
+![function node](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/4.png)
 
 Then we made it possible to generate a Map on Node Red and to track multiple users in the same time with such ease and clarity.
 
-![Map](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot%202022-02-04%20124212.png)
+![Map](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-04%20124212.png)
 
 Figure 3.10
 
@@ -183,7 +183,7 @@ This project’s approach along with an understanding of implementation procedur
 
 The implementation and evaluation of an administrative control requires alot of quality data to understand how the workers are exposed to high noise, what are the tasks which can exposed workers to high noise levels since their exposures to these levels will be very harmful for their health. To accurately identify the workers who are exposed to dangerous noise levels very precise data is required. The use of smart phone as a noise sensor can provide this data in real-time which will help in taking the decisions efficiently.  Noise levels exposures can be calculated by using the formula:
 
-![Dose formula](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/Screenshot%202022-02-07%20151717.png)
+![Dose formula](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20151717.png)
 
 Where,
 D is the noise dose (%).
@@ -194,7 +194,7 @@ Tn is the reference duration of exposure at the measured sound level (hours).
 
 This formula was added inside a function node, while corresponding change nodes were added and explained in the below figure.
 
-![Fig 3.11](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/7.png)
+![Fig 3.11](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/7.png)
 
 Figure 3.11
 
@@ -209,7 +209,7 @@ The value of 'msg.payload' increments each time to calculate three values, loop 
 
 
 
-![Function dose](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/8.png)
+![Function dose](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/8.png)
 
 ### **3.4 Functionality**
 
@@ -219,7 +219,7 @@ The project’s aim is unique due to the fact that not only the sound level with
 Throughout the development process, the system was improved in an iterative manner. Users were asked to use the system in a variety of locations. One user was asked to stand beside a Front-End Loader while hauling earth materials and was given a name phone 12 while the other was at a distance further and was called phone 11. Data for noise in decibels were then collected and plotted in the below graph.
 
 
-![db vs time graph](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/9.jpg)
+![db vs time graph](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/9.jpg)
 
 Figure 3.12
 
@@ -228,7 +228,7 @@ Overall, we can divide both graphs into 3 main time intervals: region 1 which de
 During region 2, the ambient noise reading for the neighborhood was at a much lower average than when the machine started operating between the times 17:07:31 and 17:07:46 in region 2. This disturbance can be seen from the area above the yellow line and thus correlation is built between the two graphs.
 Furthermore, the value reading we obtained for the loader (approximately 85 Decibels from graph for phone 11) is very close to the value range for a Front-End Loader as per given in the table below. This proves how precise our algorithm works and achieves better results. This was made possible after we tuned the parameters and algorithmic logic by means of mathematical models to improve its accuracy, rather than just relying on the values obtained by Node Sensor Application.
 
-[Coherence obtained between obtained value and literature](https://github.com/alizargham10/Design-Driven-Project-21-/blob/main/Images/6.png)
+[Coherence obtained between obtained value and literature](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/6.png)
 
 Figure 3.13 shows coherence between the value we obtained and the one in the literature
 
