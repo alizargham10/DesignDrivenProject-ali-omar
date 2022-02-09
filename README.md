@@ -260,8 +260,17 @@ worker noise exposures](https://www.cdc.gov/niosh/mining/UserFiles/works/pdfs/ac
 
 [NoiseSPY: A Real-Time Mobile Phone Platform for Urban Noise Monitoring and Mapping](https://www.researchgate.net/publication/220134386_NoiseSPY_A_Real-Time_Mobile_Phone_Platform_for_Urban_Noise_Monitoring_and_Mapping)
 
+[Sound decibels levels](https://www.internet4classrooms.com/sound_decibel.htm)
+
+[Noise Exposure Calculator](https://www.noisemeters.com/apps/exposure-calculator/)
+
+[Intensity and the Decibel Scale](https://www.physicsclassroom.com/class/sound/Lesson-2/Intensity-and-the-Decibel-Scale)
+
+[DEVELOPMENT OF WIRELESS SENSORNETWORKUSINGBLUETOOTH LOW ENERGY (BLE) FORCONSTRUCTIONNOISE MONITORING](https://cdt.sensors.cam.ac.uk/system/files/documents/s2is-hughes-2015.pdf)
+
+[DEVELOPMENT OF WIRELESS SENSORNETWORKUSINGBLUETOOTH LOW ENERGY (BLE) FORCONSTRUCTIONNOISE MONITORING](https://cdt.sensors.cam.ac.uk/system/files/documents/s2is-hughes-2015.pdf)
+
+[Technical Guide for: Noise Control – Engineering Controls, Work Practices, & Administrative Controls](https://oshainfo.gatech.edu/wp-content/uploads/2019/03/Technical%20Guide%20for%20Noise%20Controls.pdf)
 
 
-
-
-
+[Noise -Frequently](https://www.hsa.ie/eng/Topics/Physical_Agents/Noise/Noise_-_Frequently_Asked_Questions/#high)
