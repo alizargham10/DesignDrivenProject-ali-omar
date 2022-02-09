@@ -1,5 +1,5 @@
 ## **1. Introduction**
-The aim of this project is real-time monitoring of noise levels at a construction site for the sake of improved implementation of admnistrative control methods. The exposure to high noise level has short and long term effects on the physical and mental well-being of both the workers and the residents within the vicinity of construction sites, which is our problem statement in this project. The microphone of the smartphone has been used as a noise sensor, while its GPS is used to locate the workers exposed to the noise in-situ, and eventually Noise Perimeter Zone (NPZ) can be generated. The data is then streamed live on remotely accessible digital dashboard using the MQTT protocol. This noise data can be analyzed to plan work activities in a way which will reduce the worker's frequent exposure to high noise levels. This IoT project shall provide noise real-time data with generated maps and automated notifications (SMS) to the user in such ease and economy yet with relatively adequate precision and reliability.
+The aim of this project is real-time monitoring of noise levels at a construction site for improved implementation of administrative control methods. The exposure to high noise level has short- and long-term effects on the physical and mental well-being of both the workers and the residents within the vicinity of construction sites, which is our problem statement in this project. The microphone of the smartphone has been used as a noise sensor, while its GPS is used to locate the workers exposed to the noise in-situ, and eventually Noise Perimeter Zone (NPZ) can be generated. The data is then streamed live on remotely accessible digital dashboard using the MQTT protocol. This noise data can be analysed to plan work activities in a way which will reduce the worker's frequent exposure to high noise levels. This IoT project shall provide noise real-time data with generated maps and automated notifications (SMS) to the user in such ease and economy yet with relatively adequate precision and reliability.
 
 ![Construction noise](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/csm_PR019-standard-construction-safety_843b927ee9.jpg)
 
@@ -8,7 +8,7 @@ Figure 1
 ## **2 Installations**
 ### **2.1 Pre-requisites**
 ---
-#### The prerequisities to run this repository are as follows:
+#### The prerequisites to run this repository are as follows:
 1. Node Sensor Free android app.
 2. Node-Red Visual programming. 
 ---
@@ -33,7 +33,7 @@ Figure 1
  ---
  #### Node-Red is free, JavaScript-based server and web GUI for wiring together hardware devices.
 ### **Requirements**
-#### 1. Operating system i.e Windows, macOS or Raspberry pi 3 or 4.
+#### 1. Operating system i.e. Windows, macOS or Raspberry pi 3 or 4.
 #### 2.Network connection.
 ### **Step 1. Install Node.js**
 #### Download the latest 14.x LTS version of Node.js from the official [Node.js Home page](https://nodejs.org/en/)
@@ -102,11 +102,11 @@ Noise data in decibels are then live-streamed by Noise Free Sensor App via MQTT 
 
 ![Fig 3.2](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/sound%20capture.PNG)
 
-Figure 3.2: Public Broker Hivemq used to stream data
+Figure 3.2: Public Broker HiveMQ used to stream data
 
     
 
-Node-Red provides both an MQTT subscribe (input) and publish (output) node.The configuration for these nodes are almost identical as the main part of the configuration concerns the actual client connection. To connect to an MQTT broker or server we need to know the Broker IP address or name, and the port that it is using (default 1883). 
+Node-Red provides both an MQTT subscribe (input) and publish (output) node. The configuration for these nodes are almost identical as the main part of the configuration concerns the actual client connection. To connect to an MQTT broker or server we need to know the Broker IP address or name, and the port that it is using (default 1883). 
 
 ![Fig 3.3](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/5.png)
 
@@ -136,13 +136,13 @@ Eventually the graph for Decibels vs. Time can be plotted as shown in Figure 3.7
 ### **3.2.2 Plotting Intensity vs. Time Graph(s)**
 
 The range of energy from the lowest sound that can be heard to a sound so loud that is produces pain rather than the sensation of hearing is so large that an exponential scale is used. The lowest possible sound that can be heard is called the threshold of hearing. The sound level at the threshold of hearing is:
-![Treshold of hearing](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20142227.png)
+![Threshold of hearing](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20142227.png)
 
 Combining Equation (2) into Equation (1) and solving for Intensity, we obtain;
 
 ![Eq 2](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20145033.png)
 
-To get the value of intensity we used the formula given in eq.2, The obtained values were very small and it was very difficult to plot them on a graph. Another function used to take the logarithm of the value obtained from eq.2. With this technique we successfully ploted the intensity vs time graph.
+To get the value of intensity we used the formula given in eq.2, The obtained values were very small and it was very difficult to plot them on a graph. Another function used to take the logarithm of the value obtained from eq.2. With this technique we successfully plotted the intensity vs time graph.
 
 Graph for Intensity vs. Time can then be plotted as shown in figure 3.8 below:
 
@@ -164,7 +164,7 @@ It is then the settled a need to generate interactive maps which can allow the u
 The GPS Tracking flow was a progress made by “nygma2004” and was published the NodeRed Flows Library. This GPS tracking solution was developed mainly to work with a custom Android app which sends GSP data over email. This flow reads GPS tracks from the attachment of the email and stores it in SQL database and displays it in a map in the Dashboard. The user can store logs for multiple users, display data based on date, split the logs to different tracks.
 However, since we imported our live data by means of MQTT streaming protocol, this flow wouldn’t work to our purpose. It is then become necessary to change the code so as to import our Latitude and Longitude data via MQTT Broker and not by Gmail which was intended originally by the Flow’s developer.
 
-We then made a short development in the code to flow.get “lat” and “lon”, refereeing to latitude and longitude, respectively. Moreover line 4 gets the values for decibels and displays them on the map when the user right clicks on the circle denoting the source of noise’s location. This circle was set in line 5 with designated radius and color as shown below:
+We then made a short development in the code to flow.get “lat” and “lon”, refering to latitude and longitude, respectively. Moreover line 4 gets the values for decibels and displays them on the map when the user right clicks on the circle denoting the source of noise’s location. This circle was set in line 5 with designated radius and colour as shown below:
 
 ![function node](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/4.png)
 
@@ -181,7 +181,7 @@ This project’s approach along with an understanding of implementation procedur
 
 ### **3.3.2 Implementation and Evaluation Method**
 
-The implementation and evaluation of an administrative control requires alot of quality data to understand how the workers are exposed to high noise, what are the tasks which can exposed workers to high noise levels since their exposures to these levels will be very harmful for their health. To accurately identify the workers who are exposed to dangerous noise levels very precise data is required. The use of smart phone as a noise sensor can provide this data in real-time which will help in taking the decisions efficiently.  Noise levels exposures can be calculated by using the formula:
+The implementation and evaluation of an administrative control requires a lot of quality data to understand how the workers are exposed to high noise, what are the tasks which can exposed workers to high noise levels since their exposures to these levels will be very harmful for their health. To accurately identify the workers who are exposed to dangerous noise levels very precise data is required. The use of smart phone as a noise sensor can provide this data in real-time which will help in taking the decisions efficiently.  Noise levels exposures can be calculated by using the formula:
 
 ![Dose formula](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/Screenshot%202022-02-07%20151717.png)
 
@@ -198,9 +198,9 @@ This formula was added inside a function node, while corresponding change nodes 
 
 Figure 3.11
 
-In the fuction node 'db' variable is created as an array. The values have been assigned to it as db.1, db.2, and db.3. To assign values to these numbers we are calling 'flow.get' method because get method is used to return the value of variable name.
+In the function node 'db' variable is created as an array. The values have been assigned to it as db.1, db.2, and db.3. To assign values to these numbers we are calling 'flow.get' method because get method is used to return the value of variable name.
 
-'Flow.set' method is called and 'db' variable is passed as a paramenter because set method is used to take a parameter and assigns to it the name of variable.
+'Flow.set' method is called and 'db' variable is passed as a parameter because set method is used to take a parameter and assigns to it the name of variable.
 
 'msg.payload' is created and initial value of '0' has been assigned to it. Meanwhile 'for' loop is used to calculate the value of an array
 
@@ -213,7 +213,7 @@ The value of 'msg.payload' increments each time to calculate three values, loop 
 
 ### **3.4 Functionality**
 
-The project’s aim is unique due to the fact that not only the sound level within the perimeter of construction site environment is measured but also provides the sound level of the neighboring environment to the user. The accessibility to the monitoring display where the user can easily access the data along with respective graphs, charts, and map serves to facilitate the noise control process with such ease and more precise results than other traditional methods. The phone in this case serves as a portable sensor station that yields precise measurements as a function of the worker’s distance from the source of noise. Furthermore, it has not been implemented before an automated accurate calculation for the dose of exposure formula with regards to the Implementation and Evaluation method in accordance with the OSHA’s prescriptions. This allows the user to easily target each worker and monitor their exposure and thus work rotations and scheduling can be done accordingly with no need to calculate the dose for each worker every time. 
+The project’s aim is unique due to the fact that not only the sound level within the perimeter of construction site environment is measured but also provides the sound level of the neighbouring environment to the user. The accessibility to the monitoring display where the user can easily access the data along with respective graphs, charts, and map serves to facilitate the noise control process with such ease and more precise results than other traditional methods. The phone in this case serves as a portable sensor station that yields precise measurements as a function of the worker’s distance from the source of noise. Furthermore, it has not been implemented before an automated accurate calculation for the dose of exposure formula with regards to the Implementation and Evaluation method in accordance with the OSHA’s prescriptions. This allows the user to easily target each worker and monitor their exposure and thus work rotations and scheduling can be done accordingly with no need to calculate the dose for each worker every time. 
 
 ### **3.5 Method of Testing**
 Throughout the development process, the system was improved in an iterative manner. Users were asked to use the system in a variety of locations. One user was asked to stand beside a Front-End Loader while hauling earth materials and was given a name phone 12 while the other was at a distance further and was called phone 11. Data for noise in decibels were then collected and plotted in the below graph.
@@ -223,9 +223,9 @@ Throughout the development process, the system was improved in an iterative mann
 
 Figure 3.12
 
-As can be seen from the two graphs above, we can build a correlation between the two graphs where the former (phone 12) represents neighborhood ambient noise exposure on a citizen while the latter (phone 11) represents noise exposure of a worker who is operating the machine. 
+As can be seen from the two graphs above, we can build a correlation between the two graphs where the former (phone 12) represents neighbourhood ambient noise exposure on a citizen while the latter (phone 11) represents noise exposure of a worker who is operating the machine. 
 Overall, we can divide both graphs into 3 main time intervals: region 1 which denotes arbitrary traffic noise, region 2 which denotes ambient measurement when there is no use of heavy noisy construction machineries, and region 3 which denotes when the loader started generating noise.
-During region 2, the ambient noise reading for the neighborhood was at a much lower average than when the machine started operating between the times 17:07:31 and 17:07:46 in region 2. This disturbance can be seen from the area above the yellow line and thus correlation is built between the two graphs.
+During region 2, the ambient noise reading for the neighbourhood was at a much lower average than when the machine started operating between the times 17:07:31 and 17:07:46 in region 2. This disturbance can be seen from the area above the yellow line and thus correlation is built between the two graphs.
 Furthermore, the value reading we obtained for the loader (approximately 85 Decibels from graph for phone 11) is very close to the value range for a Front-End Loader as per given in the table below. This proves how precise our algorithm works and achieves better results. This was made possible after we tuned the parameters and algorithmic logic by means of mathematical models to improve its accuracy, rather than just relying on the values obtained by Node Sensor Application.
 
 [Coherence obtained between obtained value and literature](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/6.png)
