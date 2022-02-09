@@ -1,7 +1,7 @@
 ## **1. Introduction**
 The aim of this project is real-time monitoring of noise levels at a construction site for the sake of improved implementation of admnistrative control methods. The exposure to high noise level has short and long term effects on the physical and mental well-being of both the workers and the residents within the vicinity of construction sites, which is our problem statement in this project. The microphone of the smartphone has been used as a noise sensor, while its GPS is used to locate the workers exposed to the noise in-situ, and eventually Noise Perimeter Zone (NPZ) can be generated. The data is then streamed live on remotely accessible digital dashboard using the MQTT protocol. This noise data can be analyzed to plan work activities in a way which will reduce the worker's frequent exposure to high noise levels. This IoT project shall provide noise real-time data with generated maps and automated notifications (SMS) to the user in such ease and economy yet with relatively adequate precision and reliability.
 
-![Construction noise](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/Media/csm_PR019-standard-construction-safety_843b927ee9.jpg)
+![Construction noise](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/csm_PR019-standard-construction-safety_843b927ee9.jpg)
 
 Figure 1
 
