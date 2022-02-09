@@ -236,7 +236,7 @@ Figure 3.13 shows coherence between the value we obtained and the one in the lit
 
 ### **4.1 Figures**
 
-[Figure 1:](http://cpcbenvis.nic.in/noise_pollution_control.html#)
+[Figure 1:](https://www.ajg.com/uk/news-and-insights/2018/june/counterfeit-personal-protective-equipment-in-the-construction-sector/)
 
 [Figure: 2.1](https://play.google.com/store/apps/details?id=com.mscino.sensornode&hl=en&gl=US)
 
@@ -247,7 +247,7 @@ Figure 3.13 shows coherence between the value we obtained and the one in the lit
 ### **4.2 Research papers**
 
 [A Short Review of Constructing Noise Map
-using Crowdsensing Technology](https://www.ajg.com/uk/news-and-insights/2018/june/counterfeit-personal-protective-equipment-in-the-construction-sector/)
+using Crowdsensing Technology](https://www.researchgate.net/publication/327864920_A_Short_Review_of_Constructing_Noise_Map_Using_Crowdsensing_Technology_13th_International_Conference_CollaborateCom_2017_Edinburgh_UK_December_11-13_2017_Proceedings)
 
 [Construction Noise and Vibration
 Management Plan](https://consult.environment-agency.gov.uk/engagement/bostonbarriertwao/results/appendix-1---max-forni_s-proof-of-evidence--construction-noise-and-vibration-management-plan-.pdf)

@@ -1,0 +1,503 @@
+[
+    {
+        "id": "8e1ee7d95b151ae8",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "12b70147f5d4a322",
+        "type": "mqtt in",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "topic": "omarNodeRed12/noise/decibels",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "2c346e4275246e41",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 130,
+        "y": 140,
+        "wires": [
+            [
+                "9c0d6be5351d7d69",
+                "cb75878eb8a99a11",
+                "2e9133af1540f866",
+                "27e482db3a4b61f2",
+                "31c2c686fe277ddc",
+                "bd34811911bf6fad"
+            ]
+        ]
+    },
+    {
+        "id": "9c0d6be5351d7d69",
+        "type": "debug",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "db101f574ea5fa94",
+        "type": "ui_chart",
+        "z": "8e1ee7d95b151ae8",
+        "name": "dB vs Time phone 12",
+        "group": "233eab591633e41b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "dB vs Time phone 12",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 680,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "256e84e52803bdaa",
+        "type": "ui_chart",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "group": "7e6ec78b5df25edf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Time vs Voltage ratio phone 12",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#1be41b",
+            "#98df8a",
+            "#d11a1a",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "inputLabels": [
+            "time (hrs)"
+        ]
+    },
+    {
+        "id": "cb75878eb8a99a11",
+        "type": "function",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "func": "msg.payload = msg.payload / (20 * 2.718);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 20,
+        "wires": [
+            [
+                "256e84e52803bdaa",
+                "d12a7d562286caa0"
+            ]
+        ]
+    },
+    {
+        "id": "d12a7d562286caa0",
+        "type": "debug",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "2e9133af1540f866",
+        "type": "function",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "func": "msg.payload = 2 * msg.payload; \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "db101f574ea5fa94"
+            ]
+        ]
+    },
+    {
+        "id": "27e482db3a4b61f2",
+        "type": "change",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "80",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "upperlimit",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 280,
+        "wires": [
+            [
+                "db101f574ea5fa94"
+            ]
+        ]
+    },
+    {
+        "id": "2f19191e137bfd23",
+        "type": "inject",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 480,
+        "wires": [
+            [
+                "8b1a1d8f2a2a620a"
+            ]
+        ]
+    },
+    {
+        "id": "8b1a1d8f2a2a620a",
+        "type": "function",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "func": "var db = [\n    {\"no\":1, \"value\": flow.get(\"db.1\")},\n    {\"no\":2, \"value\": flow.get(\"db.2\")},\n    {\"no\":3, \"value\": flow.get(\"db.3\")},\n    {\"no\":1, \"value\": flow.get(\"db.1\")}\n]\n\nflow.set(\"db\", db);\n\nmsg.payload = 0;\n\nfor (let x of flow.get('db')){\n    msg.payload +=(1/(8/(2**(((2*x.value)-90)/5))));\n}\n\nmsg.payload = String(msg.payload * 100) + \"%\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 480,
+        "wires": [
+            [
+                "f1215a5df2f2883f"
+            ]
+        ]
+    },
+    {
+        "id": "f1215a5df2f2883f",
+        "type": "debug",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "31c2c686fe277ddc",
+        "type": "change",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "db.1",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f703cca5acfaa994",
+        "type": "comment",
+        "z": "8e1ee7d95b151ae8",
+        "name": "←Attach this to every mqtt in and CHANGE \"n\" to the number!!!",
+        "info": "Attach this to every mqtt in\nMODIFY THE CODE!!!",
+        "x": 690,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "26de4334b8dbe12b",
+        "type": "comment",
+        "z": "8e1ee7d95b151ae8",
+        "name": "The magic",
+        "info": "",
+        "x": 120,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "bd34811911bf6fad",
+        "type": "function",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "func": "msg.payload = 10 ** (-12) * (10 ** (msg.payload /10));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "5615e19dc0ec5a47",
+                "c4f1d0cfcfd9a4ea"
+            ]
+        ]
+    },
+    {
+        "id": "5615e19dc0ec5a47",
+        "type": "debug",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6ea7b90232673602",
+        "type": "ui_chart",
+        "z": "8e1ee7d95b151ae8",
+        "name": "Intensity vs time phone 12",
+        "group": "c8c4c00292f6f930",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Intensity vs time phone 12",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "12.5",
+        "ymax": "7.5",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 710,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4f1d0cfcfd9a4ea",
+        "type": "function",
+        "z": "8e1ee7d95b151ae8",
+        "name": "",
+        "func": "msg.payload = -Math.log10(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 380,
+        "wires": [
+            [
+                "6ea7b90232673602"
+            ]
+        ]
+    },
+    {
+        "id": "2c346e4275246e41",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "233eab591633e41b",
+        "type": "ui_group",
+        "name": "db vs time graph",
+        "tab": "e1e772d51d953d6e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7e6ec78b5df25edf",
+        "type": "ui_group",
+        "name": "Voltage ratio vs time graph",
+        "tab": "e1e772d51d953d6e",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c8c4c00292f6f930",
+        "type": "ui_group",
+        "name": "Intensity vs time graph ",
+        "tab": "e1e772d51d953d6e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e1e772d51d953d6e",
+        "type": "ui_tab",
+        "name": "Noise data ",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    }
+]
