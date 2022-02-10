@@ -274,3 +274,9 @@ worker noise exposures](https://www.cdc.gov/niosh/mining/UserFiles/works/pdfs/ac
 
 
 [Noise -Frequently](https://www.hsa.ie/eng/Topics/Physical_Agents/Noise/Noise_-_Frequently_Asked_Questions/#high)
+
+---
+### **Credits**
+Ali Zargham   ali.kazmi@rwth-aachen.de
+
+Omar Aldohami omar.aldohami@rwth-aachen.de
