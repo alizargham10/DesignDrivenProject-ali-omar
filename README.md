@@ -83,7 +83,7 @@ Figure 2.4
 
 ## **3 Methodology**
 ## **3.1 Introduction** 
-When it comes to the methodology of how the project was implemented, it is rather convenient at this point to highlight the fact that all the work that has been done was a result of an intensive academic research on controlling construction noise. The reader of this Read Me file may refer to the References section at the end of this file or simply by clicking the link
+When it comes to the methodology of how the project was implemented, it is rather convenient at this point to highlight the fact that all the work that has been done was a result of an intensive academic research on controlling construction noise. The reader of this Read Me file may refer to the References section at the end of this file
 
  
 ### **3.2 Technical Background**
