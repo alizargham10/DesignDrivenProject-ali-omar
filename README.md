@@ -219,7 +219,7 @@ The project’s aim is unique due to the fact that not only the sound level with
 Throughout the development process, the system was improved in an iterative manner. Users were asked to use the system in a variety of locations. One user was asked to stand beside a Front-End Loader while hauling earth materials and was given a name phone 12 while the other was at a distance further and was called phone 11. Data for noise in decibels were then collected and plotted in the below graph.
 
 
-![db vs time graph](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/9.jpg)
+![db vs time graph](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/co-relation.png)
 
 Figure 3.12
 
@@ -228,7 +228,7 @@ Overall, we can divide both graphs into 3 main time intervals: region 1 which de
 During region 2, the ambient noise reading for the neighbourhood was at a much lower average than when the machine started operating between the times 17:07:31 and 17:07:46 in region 2. This disturbance can be seen from the area above the yellow line and thus correlation is built between the two graphs.
 Furthermore, the value reading we obtained for the loader (approximately 85 Decibels from graph for phone 11) is very close to the value range for a Front-End Loader as per given in the table below. This proves how precise our algorithm works and achieves better results. This was made possible after we tuned the parameters and algorithmic logic by means of mathematical models to improve its accuracy, rather than just relying on the values obtained by Node Sensor Application.
 
-[Coherence obtained between obtained value and literature](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/6.png)
+[Coherence obtained between obtained value and literature](https://github.com/alizargham10/DesignDrivenProject-ali-omar/blob/main/media/reference%20picture.png)
 
 Figure 3.13 shows coherence between the value we obtained and the one in the literature
 
